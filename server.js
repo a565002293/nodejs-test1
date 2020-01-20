@@ -23,7 +23,11 @@ var server = http.createServer(function (request, response) {
     if (path === '/') {
         response.statusCode = 200
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
-        response.write(`欢迎来到我的网页`)
+        response.write(`  
+            <link rel="stylesheet" href="/x">
+            <body><h1>欢迎来到我的网页</h1></body>
+            `
+        );
         response.end()
     } else if (path === '/x') {
         response.statusCode = 200
